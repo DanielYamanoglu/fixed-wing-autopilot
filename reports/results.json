@@ -1,0 +1,216 @@
+{
+  "trim": {
+    "airspeed_ms": 25.0,
+    "alpha_deg": 2.855,
+    "elevator_deg": -7.119,
+    "throttle": 0.327,
+    "residual": 0.0
+  },
+  "open_loop_modes": {
+    "short period": {
+      "eig_re": -4.89,
+      "eig_im": 9.869,
+      "wn": 11.014,
+      "zeta": 0.444
+    },
+    "phugoid": {
+      "eig_re": -0.314,
+      "eig_im": 0.381,
+      "wn": 0.493,
+      "zeta": 0.636
+    },
+    "dutch roll": {
+      "eig_re": -1.552,
+      "eig_im": 5.934,
+      "wn": 6.134,
+      "zeta": 0.253
+    },
+    "roll subsidence": {
+      "eig_re": -22.026,
+      "eig_im": 0.0,
+      "wn": 22.026,
+      "zeta": 1.0
+    },
+    "spiral": {
+      "eig_re": 0.062,
+      "eig_im": 0.0,
+      "wn": 0.062,
+      "zeta": -1.0
+    }
+  },
+  "margins": {
+    "PID": {
+      "elevator": {
+        "gain_margin_db": null,
+        "phase_margin_deg": 55.645,
+        "delay_margin_ms": 53.559,
+        "crossover_rad_s": 18.133,
+        "vector_margin": 0.682,
+        "disk_phase_margin_deg": 39.9
+      },
+      "aileron": {
+        "gain_margin_db": 14.822,
+        "phase_margin_deg": 68.417,
+        "delay_margin_ms": 210.607,
+        "crossover_rad_s": 5.67,
+        "vector_margin": 0.66,
+        "disk_phase_margin_deg": 38.523
+      },
+      "rudder": {
+        "gain_margin_db": null,
+        "phase_margin_deg": 49.804,
+        "delay_margin_ms": 632.005,
+        "crossover_rad_s": 1.681,
+        "vector_margin": 0.683,
+        "disk_phase_margin_deg": 39.951
+      },
+      "throttle": {
+        "gain_margin_db": null,
+        "phase_margin_deg": 76.109,
+        "delay_margin_ms": 3560.878,
+        "crossover_rad_s": 0.373,
+        "vector_margin": 0.92,
+        "disk_phase_margin_deg": 54.751
+      }
+    },
+    "LQR": {
+      "elevator": {
+        "gain_margin_db": null,
+        "phase_margin_deg": 82.565,
+        "delay_margin_ms": 102.889,
+        "crossover_rad_s": 14.006,
+        "vector_margin": 0.788,
+        "disk_phase_margin_deg": 46.421
+      },
+      "aileron": {
+        "gain_margin_db": null,
+        "phase_margin_deg": 104.037,
+        "delay_margin_ms": 201.464,
+        "crossover_rad_s": 9.013,
+        "vector_margin": 0.863,
+        "disk_phase_margin_deg": 51.114
+      },
+      "rudder": {
+        "gain_margin_db": null,
+        "phase_margin_deg": 57.617,
+        "delay_margin_ms": 68.653,
+        "crossover_rad_s": 14.648,
+        "vector_margin": 0.72,
+        "disk_phase_margin_deg": 42.23
+      },
+      "throttle": {
+        "gain_margin_db": null,
+        "phase_margin_deg": 56.407,
+        "delay_margin_ms": 364.156,
+        "crossover_rad_s": 2.703,
+        "vector_margin": 0.733,
+        "disk_phase_margin_deg": 42.981
+      }
+    }
+  },
+  "steps": {
+    "PID": {
+      "altitude +20 m": {
+        "rise_s": 3.52,
+        "overshoot_pct": 6.369,
+        "settling_s": 5.88,
+        "final": 20.0,
+        "max_roll_deg": 0.0
+      },
+      "course +90°": {
+        "rise_s": 5.82,
+        "overshoot_pct": 3.067,
+        "settling_s": 7.48,
+        "final": 90.0,
+        "max_roll_deg": 30.477
+      },
+      "airspeed +5 m/s": {
+        "rise_s": 4.54,
+        "overshoot_pct": 0.0,
+        "settling_s": 6.18,
+        "final": 5.0,
+        "max_roll_deg": 0.0
+      }
+    },
+    "LQR": {
+      "altitude +20 m": {
+        "rise_s": 4.96,
+        "overshoot_pct": 9.34,
+        "settling_s": 16.5,
+        "final": 19.991,
+        "max_roll_deg": 0.0
+      },
+      "course +90°": {
+        "rise_s": 5.3,
+        "overshoot_pct": 3.201,
+        "settling_s": 6.88,
+        "final": 90.0,
+        "max_roll_deg": 27.497
+      },
+      "airspeed +5 m/s": {
+        "rise_s": 0.4,
+        "overshoot_pct": 5.568,
+        "settling_s": 2.56,
+        "final": 5.0,
+        "max_roll_deg": 0.0
+      }
+    }
+  },
+  "mission": {
+    "PID": {
+      "success": true,
+      "failures": [],
+      "duration_s": 205.8,
+      "xtrack_rms_m": 2.985,
+      "xtrack_max_m": 31.116,
+      "altitude_rms_m": 0.757,
+      "altitude_max_m": 5.687,
+      "airspeed_rms_ms": 0.975,
+      "max_roll_deg": 31.906,
+      "surface_activity_deg": 8.036
+    },
+    "LQR": {
+      "success": true,
+      "failures": [],
+      "duration_s": 205.72,
+      "xtrack_rms_m": 4.019,
+      "xtrack_max_m": 38.286,
+      "altitude_rms_m": 1.517,
+      "altitude_max_m": 5.129,
+      "airspeed_rms_ms": 0.842,
+      "max_roll_deg": 37.912,
+      "surface_activity_deg": 3.395
+    }
+  },
+  "monte_carlo": {
+    "PID": {
+      "runs": 100,
+      "success_rate": 0.99,
+      "xtrack_rms_mean_m": 2.354,
+      "xtrack_rms_p95_m": 7.833,
+      "altitude_rms_mean_m": 0.887,
+      "altitude_max_p95_m": 6.225,
+      "airspeed_rms_mean_ms": 0.983,
+      "max_roll_p95_deg": 34.813,
+      "surface_activity_mean_deg": 8.359,
+      "failures": [
+        "seed 30: airspeed envelope"
+      ]
+    },
+    "LQR": {
+      "runs": 100,
+      "success_rate": 0.98,
+      "xtrack_rms_mean_m": 5.988,
+      "xtrack_rms_p95_m": 24.871,
+      "altitude_rms_mean_m": 1.748,
+      "altitude_max_p95_m": 8.641,
+      "airspeed_rms_mean_ms": 0.858,
+      "max_roll_p95_deg": 39.58,
+      "surface_activity_mean_deg": 3.396,
+      "failures": [
+        "seed 10: mission not completed",
+        "seed 30: airspeed envelope"
+      ]
+    }
+  }
+}

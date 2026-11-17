@@ -1,0 +1,22 @@
+[project]
+name = "fixed-wing-autopilot"
+version = "0.1.0"
+description = "Fixed-wing UAV flight control: nonlinear 6 DoF model, trim and linearisation, successive loop closure PID and LQR autopilots, path following, stability margins and Monte Carlo robustness"
+requires-python = ">=3.12,<3.13"
+dependencies = ["numpy>=1.26", "scipy>=1.13", "matplotlib>=3.9"]
+
+[dependency-groups]
+dev = ["pytest>=8"]
+
+[project.scripts]
+uavctl = "uavctl.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/uavctl"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
